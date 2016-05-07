@@ -24,22 +24,31 @@ public class App {
 	public static void main(String[] args) {
 		
 		String reportfile = "testbean.jasper";
+//		String reportfile = "HorizontalListReport.jasper";
 		String outFileName = "E://test.pdf";
 		File sourceFile = new File(reportfile);
 		Map<String, Object> map = new HashMap<>();
-		map.put("id", "id");
-		map.put("name", "name");
-		map.put("address", "address");
+//		map.put("id", "id");
+//		map.put("name", "name");
+//		map.put("address", "address");
+		/*List<Address> list = new ArrayList<>();
+		for (int i = 0; i < 100; i++) {
+			Address info = new Address();
+			info.setId(i + 1);
+			info.setCity("city" + i);
+			info.setFirstName("firstName" + i);
+			info.setLastName("lastName" + i);
+			info.setStreet("street" + i);
+			
+			list.add(info);
+		}*/
 		List<UserInfo> list = new ArrayList<>();
 		for (int i = 0; i < 100; i++) {
 			UserInfo info = new UserInfo();
-			info.setId(i + 1);
-			info.setName("测试名称" + i);
-			info.setAddress("大家好发电机房" + i);
+			info.setName("name" + i);
 			
 			list.add(info);
 		}
-		
 		JRDataSource dataSource = new JRBeanCollectionDataSource(list);
 		try {
 			JasperReport jasperReport = (JasperReport)JRLoader.loadObject(sourceFile);
@@ -50,7 +59,7 @@ public class App {
 //			JRPdfExporter exporter = new JRPdfExporter();
 //			
 //			exporter.setParameter(JRExporterParameter.OUTPUT_FILE_NAME, outFileName);
-//            exporter.setParameter(JRExporterParameter.JASPER_PRINT, print);
+//            exporter.setParameter(JRExporterParameter.JASPER_PRINT, jasperPrint);
 //            exporter.exportReport();
 		} catch (JRException e) {
 			// TODO Auto-generated catch block
