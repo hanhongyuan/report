@@ -1,7 +1,9 @@
 package com.yunxinlink.report;
 
 import java.io.File;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -23,13 +25,52 @@ import net.sf.jasperreports.engine.util.JRSaver;
 public class App {
 	public static void main(String[] args) {
 		
-		String reportfile = "testbean.jasper";
+		String reportfile = "exam_erport.jasper";
+//		String reportfile = "Blank_A4.jasper";
+//		String reportfile = "testbean.jasper";
 //		String reportfile = "HorizontalListReport.jasper";
 		String outFileName = "E://test.pdf";
 		File sourceFile = new File(reportfile);
 		Map<String, Object> map = new HashMap<>();
+		map.put("sno", "SN00000000014856");
+		map.put("realName", "张三");
+		map.put("cardType", "身份证");
+		map.put("gender", "男");
+		map.put("birthday", getBirthday());
+		map.put("nationality", "中国");
+		map.put("cardNumber", "422802197805123124");
+		map.put("censusType", "本地户籍");
+		map.put("height", 173);
+		map.put("eyesightLeft", "4.8");
+		map.put("applyLicenceType", "C1");
+		map.put("alreadyLicenceType", "无");
+		map.put("postAddress", "广东省深圳市南山区xxx街道152号");
+		map.put("phoneNumber", "18975621456");
+		map.put("eyesightRight", "4.6");
+		map.put("hospital", "深圳市人民医院");
+		map.put("examDate", getExamDate());
+		map.put("limbLeftTop", "正常");
+		map.put("limbRightTop", "正常");
+		map.put("limbLeftBottom", "正常");
+		map.put("limbRightBottom", "正常");
+		map.put("principal", "无");
+		map.put("principalAddress", "无");
+		map.put("principalIdCard", "无");
+		map.put("principalPhone", "无");
+		map.put("principalCardType", "无");
+		map.put("doctor", "李圣杰");
+		map.put("isCorrectionLeftEye", false);
+		map.put("isCorrectionRightEye", true);
+		map.put("hasHearingAids", false);
+		map.put("isLeftEarQualified", true);
+		map.put("isRightEarQualified", false);
+		map.put("isTrunkNeckPerfect", true);
+		map.put("isMotorDysfunction", false);
+		map.put("haveIllness", true);
+		map.put("isColorBlindness", true);
+		map.put("hasProxy", false);
 //		map.put("id", "id");
-//		map.put("name", "name");
+//		map.put("name", "nameValue");
 //		map.put("address", "address");
 		/*List<Address> list = new ArrayList<>();
 		for (int i = 0; i < 100; i++) {
@@ -42,10 +83,10 @@ public class App {
 			
 			list.add(info);
 		}*/
-		List<UserInfo> list = new ArrayList<>();
-		for (int i = 0; i < 100; i++) {
-			UserInfo info = new UserInfo();
-			info.setName("name" + i);
+		List<InessInfo> list = new ArrayList<>();
+		for (int i = 0; i < 10; i++) {
+			InessInfo info = new InessInfo();
+			info.setIllnessType("疾病类型" + i);
 			
 			list.add(info);
 		}
@@ -66,5 +107,15 @@ public class App {
 			e.printStackTrace();
 		}
 	
+	}
+	
+	public static String getBirthday() {
+		SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
+		return dateFormat.format(new Date());
+	}
+	
+	public static String getExamDate() {
+		SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy 年 MM 月 dd 日");
+		return dateFormat.format(new Date());
 	}
 }

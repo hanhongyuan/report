@@ -70,17 +70,17 @@
 			</exclusions>
 		</dependency>
 		
-		<dependency>
+		<!-- <dependency>
 			<groupId>net.sf.jasperreports</groupId>
 			<artifactId>jasperreports-fonts</artifactId>
 			<version>6.0.0</version>
-		</dependency>
+		</dependency> -->
 		
-		<dependency>
+		<!-- <dependency>
 			<groupId>com.lowagie</groupId>
 			<artifactId>itext</artifactId>
 			<version>4.2.2</version>
-		</dependency>
+		</dependency> -->
 		
 		
 		<!-- <dependency>
@@ -107,12 +107,17 @@
 			<version>5.2.0</version>
 		</dependency> -->
 		
-		<dependency>
+		<!-- <dependency>
 		  <groupId>com.lowagie.text</groupId>
 		  <artifactId>itext-asian</artifactId>
 		  <version>5.2.0</version>
-		</dependency>
+		</dependency> -->
 		
+		<!-- <dependency>
+			<groupId>net.sf.jasperreports</groupId>
+			<artifactId>jasperreports-functions</artifactId>
+			<version>6.2.1</version>
+		</dependency> -->
 		
 		<dependency>
 			<groupId>org.olap4j</groupId>

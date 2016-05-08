@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Created with Jaspersoft Studio version 6.2.1.final using JasperReports Library version 6.2.1  -->
-<!-- 2016-05-07T18:49:29 -->
-<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Blank_A4" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="af1797af-9524-401a-bec6-6424843397c1">
+<!-- 2016-05-08T22:54:05 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="exam_erport" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="af1797af-9524-401a-bec6-6424843397c1">
 	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
 	<style name="Table_TH" mode="Opaque" backcolor="#F0F8FF">
 		<box>
@@ -67,44 +67,130 @@
 			<fieldDescription><![CDATA[疾病类型]]></fieldDescription>
 		</field>
 	</subDataset>
+	<parameter name="sno" class="java.lang.String">
+		<parameterDescription><![CDATA[体检单的编号]]></parameterDescription>
+	</parameter>
+	<parameter name="realName" class="java.lang.String">
+		<parameterDescription><![CDATA[姓名]]></parameterDescription>
+	</parameter>
+	<parameter name="cardType" class="java.lang.String">
+		<parameterDescription><![CDATA[证件类型]]></parameterDescription>
+	</parameter>
+	<parameter name="gender" class="java.lang.String">
+		<parameterDescription><![CDATA[性别]]></parameterDescription>
+	</parameter>
+	<parameter name="birthday" class="java.lang.String">
+		<parameterDescription><![CDATA[出生日期]]></parameterDescription>
+	</parameter>
+	<parameter name="nationality" class="java.lang.String">
+		<parameterDescription><![CDATA[国籍]]></parameterDescription>
+	</parameter>
+	<parameter name="cardNumber" class="java.lang.String">
+		<parameterDescription><![CDATA[证件号码]]></parameterDescription>
+	</parameter>
+	<parameter name="censusType" class="java.lang.String">
+		<parameterDescription><![CDATA[户籍类型，主要有本地户籍和外地户籍]]></parameterDescription>
+	</parameter>
+	<parameter name="height" class="java.lang.Integer">
+		<parameterDescription><![CDATA[身高]]></parameterDescription>
+	</parameter>
+	<parameter name="eyesightLeft" class="java.lang.String">
+		<parameterDescription><![CDATA[左眼视力]]></parameterDescription>
+	</parameter>
+	<parameter name="applyLicenceType" class="java.lang.String">
+		<parameterDescription><![CDATA[申请准驾车型]]></parameterDescription>
+	</parameter>
+	<parameter name="alreadyLicenceType" class="java.lang.String">
+		<parameterDescription><![CDATA[已有准驾车型]]></parameterDescription>
+	</parameter>
+	<parameter name="postAddress" class="java.lang.String">
+		<parameterDescription><![CDATA[邮寄地址]]></parameterDescription>
+	</parameter>
+	<parameter name="phoneNumber" class="java.lang.String">
+		<parameterDescription><![CDATA[联系电话]]></parameterDescription>
+	</parameter>
+	<parameter name="eyesightRight" class="java.lang.String">
+		<parameterDescription><![CDATA[右眼视力]]></parameterDescription>
+	</parameter>
+	<parameter name="hospital" class="java.lang.String">
+		<parameterDescription><![CDATA[医院名称]]></parameterDescription>
+	</parameter>
+	<parameter name="examDate" class="java.lang.String">
+		<parameterDescription><![CDATA[体检时间]]></parameterDescription>
+	</parameter>
+	<parameter name="limbLeftTop" class="java.lang.String">
+		<parameterDescription><![CDATA[左上肢]]></parameterDescription>
+	</parameter>
+	<parameter name="limbRightTop" class="java.lang.String">
+		<parameterDescription><![CDATA[右上肢]]></parameterDescription>
+	</parameter>
+	<parameter name="limbLeftBottom" class="java.lang.String">
+		<parameterDescription><![CDATA[左下肢]]></parameterDescription>
+	</parameter>
+	<parameter name="limbRightBottom" class="java.lang.String">
+		<parameterDescription><![CDATA[右下肢]]></parameterDescription>
+	</parameter>
+	<parameter name="principal" class="java.lang.String">
+		<parameterDescription><![CDATA[委托人]]></parameterDescription>
+	</parameter>
+	<parameter name="principalAddress" class="java.lang.String">
+		<parameterDescription><![CDATA[委托人联系地址]]></parameterDescription>
+	</parameter>
+	<parameter name="principalIdCard" class="java.lang.String">
+		<parameterDescription><![CDATA[委托人证件号码]]></parameterDescription>
+	</parameter>
+	<parameter name="principalPhone" class="java.lang.String">
+		<parameterDescription><![CDATA[委托人电话号码]]></parameterDescription>
+	</parameter>
+	<parameter name="doctor" class="java.lang.String">
+		<parameterDescription><![CDATA[医生姓名]]></parameterDescription>
+	</parameter>
+	<parameter name="principalCardType" class="java.lang.String">
+		<parameterDescription><![CDATA[委托人证件类型名称]]></parameterDescription>
+	</parameter>
+	<parameter name="isCorrectionLeftEye" class="java.lang.Boolean">
+		<parameterDescription><![CDATA[是否矫正左眼视力]]></parameterDescription>
+		<defaultValueExpression><![CDATA[FALSE( )]]></defaultValueExpression>
+	</parameter>
+	<parameter name="isCorrectionRightEye" class="java.lang.Boolean">
+		<parameterDescription><![CDATA[是否矫正右眼视力]]></parameterDescription>
+		<defaultValueExpression><![CDATA[FALSE( )]]></defaultValueExpression>
+	</parameter>
+	<parameter name="hasHearingAids" class="java.lang.Boolean">
+		<parameterDescription><![CDATA[是否有助听器]]></parameterDescription>
+		<defaultValueExpression><![CDATA[FALSE( )]]></defaultValueExpression>
+	</parameter>
+	<parameter name="isLeftEarQualified" class="java.lang.Boolean">
+		<parameterDescription><![CDATA[左耳是否达标]]></parameterDescription>
+		<defaultValueExpression><![CDATA[TRUE( )]]></defaultValueExpression>
+	</parameter>
+	<parameter name="isRightEarQualified" class="java.lang.Boolean">
+		<parameterDescription><![CDATA[右耳是否达标]]></parameterDescription>
+		<defaultValueExpression><![CDATA[TRUE( )]]></defaultValueExpression>
+	</parameter>
+	<parameter name="isTrunkNeckPerfect" class="java.lang.Boolean">
+		<parameterDescription><![CDATA[颈部和躯干是否正常]]></parameterDescription>
+		<defaultValueExpression><![CDATA[TRUE( )]]></defaultValueExpression>
+	</parameter>
+	<parameter name="isMotorDysfunction" class="java.lang.Boolean">
+		<parameterDescription><![CDATA[双下肢缺失或者丧失运动功能障碍是否能够自主坐立]]></parameterDescription>
+		<defaultValueExpression><![CDATA[TRUE( )]]></defaultValueExpression>
+	</parameter>
+	<parameter name="haveIllness" class="java.lang.Boolean">
+		<parameterDescription><![CDATA[是否具有以下疾病]]></parameterDescription>
+	</parameter>
+	<parameter name="isColorBlindness" class="java.lang.Boolean">
+		<parameterDescription><![CDATA[是否是色盲]]></parameterDescription>
+	</parameter>
+	<parameter name="hasProxy" class="java.lang.Boolean">
+		<parameterDescription><![CDATA[是否是委托人申请的]]></parameterDescription>
+		<defaultValueExpression><![CDATA[FALSE( )]]></defaultValueExpression>
+	</parameter>
 	<queryString>
 		<![CDATA[]]>
 	</queryString>
-	<field name="sno" class="java.lang.String">
-		<fieldDescription><![CDATA[体检单的编号]]></fieldDescription>
-	</field>
-	<field name="realName" class="java.lang.String">
-		<fieldDescription><![CDATA[姓名]]></fieldDescription>
-	</field>
-	<field name="cardType" class="java.lang.String">
-		<fieldDescription><![CDATA[证件类型]]></fieldDescription>
-	</field>
-	<field name="gender" class="java.lang.String">
-		<fieldDescription><![CDATA[性别]]></fieldDescription>
-	</field>
-	<field name="birthday" class="java.lang.String">
-		<fieldDescription><![CDATA[出身日期]]></fieldDescription>
-	</field>
-	<field name="nationality" class="java.lang.String">
-		<fieldDescription><![CDATA[国籍]]></fieldDescription>
-	</field>
-	<field name="cardNumber" class="java.lang.String">
-		<fieldDescription><![CDATA[证件号码]]></fieldDescription>
-	</field>
-	<field name="censusType" class="java.lang.String">
-		<fieldDescription><![CDATA[户籍类型，主要有本地户籍和外地户籍]]></fieldDescription>
-	</field>
-	<field name="applyLicenceType" class="java.lang.String">
-		<fieldDescription><![CDATA[申请准驾车型]]></fieldDescription>
-	</field>
-	<field name="alreadyLicenceType" class="java.lang.String">
-		<fieldDescription><![CDATA[已有准驾车型]]></fieldDescription>
-	</field>
-	<field name="postAddress" class="java.lang.String">
-		<fieldDescription><![CDATA[邮寄地址]]></fieldDescription>
-	</field>
-	<field name="phoneNumber" class="java.lang.String">
-		<fieldDescription><![CDATA[联系电话]]></fieldDescription>
+	<field name="illnessType" class="java.lang.String">
+		<fieldDescription><![CDATA[illnessType]]></fieldDescription>
 	</field>
 	<background>
 		<band splitType="Stretch"/>
@@ -114,262 +200,318 @@
 			<staticText>
 				<reportElement x="180" y="10" width="210" height="20" uuid="62afec98-b6ef-4e69-a17a-5fba17ad388d"/>
 				<textElement textAlignment="Center">
-					<font size="14"/>
+					<font fontName="宋体" size="14" isBold="true"/>
 				</textElement>
-				<text><![CDATA[《机动车驾驶人身体条件证明》]]></text>
+				<text><![CDATA[动车驾驶人身体条件证明]]></text>
 			</staticText>
 		</band>
 	</title>
 	<columnHeader>
 		<band height="68">
 			<staticText>
-				<reportElement x="30" y="-33" width="100" height="13" uuid="33709aea-63bc-4969-a252-67ef9ffe8962"/>
+				<reportElement x="30" y="-33" width="90" height="13" uuid="33709aea-63bc-4969-a252-67ef9ffe8962"/>
+				<textElement>
+					<font fontName="宋体"/>
+				</textElement>
 				<text><![CDATA[身体条件证明编号：]]></text>
 			</staticText>
 			<textField>
-				<reportElement x="127" y="-33" width="100" height="13" uuid="580c2447-c7ad-4951-96b2-10b8ef8a4b26"/>
-				<textFieldExpression><![CDATA[$F{sno}]]></textFieldExpression>
+				<reportElement x="124" y="-33" width="100" height="13" uuid="580c2447-c7ad-4951-96b2-10b8ef8a4b26"/>
+				<textElement>
+					<font fontName="宋体"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{sno}]]></textFieldExpression>
 			</textField>
-			<staticText>
-				<reportElement x="189" y="0" width="100" height="30" uuid="dc2d85a3-b8f4-47ab-b6cd-ac73e29dba48"/>
-				<text><![CDATA[postAddress]]></text>
-			</staticText>
-			<staticText>
-				<reportElement x="245" y="0" width="100" height="30" uuid="b866e948-fead-463f-a6a2-aafd69968085"/>
-				<text><![CDATA[phoneNumber]]></text>
-			</staticText>
 		</band>
 	</columnHeader>
 	<detail>
-		<band height="409" splitType="Stretch">
+		<band height="583" splitType="Stretch">
 			<textField>
-				<reportElement x="131" y="-8" width="88" height="19" uuid="a4af7144-3188-4a06-9df9-fbd079e7b758"/>
+				<reportElement x="131" y="-38" width="88" height="19" uuid="a4af7144-3188-4a06-9df9-fbd079e7b758">
+					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+				</reportElement>
 				<box>
 					<leftPen lineWidth="1.0"/>
 					<bottomPen lineWidth="1.0"/>
 				</box>
-				<textElement textAlignment="Center" verticalAlignment="Middle"/>
-				<textFieldExpression><![CDATA[$F{applyLicenceType}]]></textFieldExpression>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="宋体"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{applyLicenceType}]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement x="0" y="-50" width="13" height="200" uuid="2e240222-78af-456d-9623-588c71a3bbbf"/>
+				<reportElement x="0" y="-80" width="15" height="200" uuid="2e240222-78af-456d-9623-588c71a3bbbf">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
 				<box topPadding="1" leftPadding="1" bottomPadding="1" rightPadding="1">
 					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
 					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
-				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="宋体"/>
+				</textElement>
 				<text><![CDATA[申报人申报事项]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="13" y="-50" width="17" height="101" uuid="87326aed-40ce-4533-9d73-5f592c6ab707"/>
+				<reportElement x="15" y="-80" width="14" height="101" uuid="87326aed-40ce-4533-9d73-5f592c6ab707">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
 				<box>
 					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
 					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
-				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="宋体"/>
+				</textElement>
 				<text><![CDATA[申请人信息]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="13" y="51" width="17" height="99" uuid="1538a6db-3543-414d-b860-09d626e1001c"/>
+				<reportElement x="15" y="21" width="15" height="99" uuid="1538a6db-3543-414d-b860-09d626e1001c">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
 				<box>
 					<topPen lineWidth="1.0"/>
 					<leftPen lineWidth="1.0"/>
 					<bottomPen lineWidth="1.0"/>
 					<rightPen lineWidth="1.0"/>
 				</box>
-				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="宋体"/>
+				</textElement>
 				<text><![CDATA[申告事项]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="30" y="-50" width="50" height="20" uuid="7a9d7462-1c88-4a31-a547-fb28738dcd81"/>
+				<reportElement x="30" y="-80" width="50" height="20" uuid="7a9d7462-1c88-4a31-a547-fb28738dcd81"/>
 				<box>
 					<topPen lineWidth="1.0"/>
 					<leftPen lineWidth="1.0"/>
 				</box>
-				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="宋体"/>
+				</textElement>
 				<text><![CDATA[姓名]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="30" y="-29" width="50" height="20" uuid="66b2bae8-7813-4b4f-85d8-65884536927a"/>
+				<reportElement x="30" y="-59" width="50" height="20" uuid="66b2bae8-7813-4b4f-85d8-65884536927a"/>
 				<box>
 					<topPen lineWidth="1.0"/>
 					<leftPen lineWidth="1.0"/>
 					<bottomPen lineWidth="1.0"/>
 				</box>
-				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="宋体"/>
+				</textElement>
 				<text><![CDATA[证件名称]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="30" y="-9" width="100" height="20" uuid="db5dcf02-8f68-457d-9fd4-86eccfd2da62"/>
+				<reportElement x="30" y="-39" width="100" height="20" uuid="db5dcf02-8f68-457d-9fd4-86eccfd2da62"/>
 				<box>
 					<leftPen lineWidth="1.0"/>
 					<bottomPen lineWidth="1.0"/>
 				</box>
-				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="宋体"/>
+				</textElement>
 				<text><![CDATA[申请准驾车型]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="30" y="12" width="100" height="19" uuid="20d3e0ed-93ab-4fb8-9900-dfc2a5d909fe"/>
+				<reportElement x="30" y="-18" width="100" height="19" uuid="20d3e0ed-93ab-4fb8-9900-dfc2a5d909fe"/>
 				<box>
 					<leftPen lineWidth="1.0"/>
 					<bottomPen lineWidth="1.0"/>
 				</box>
-				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="宋体"/>
+				</textElement>
 				<text><![CDATA[已具有准驾车型]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="30" y="31" width="50" height="20" uuid="78f47d16-0a9a-4e74-8822-ac89d69b7570"/>
+				<reportElement x="30" y="1" width="50" height="20" uuid="78f47d16-0a9a-4e74-8822-ac89d69b7570"/>
 				<box>
 					<leftPen lineWidth="1.0"/>
 					<bottomPen lineWidth="1.0"/>
 				</box>
-				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="宋体"/>
+				</textElement>
 				<text><![CDATA[邮寄地址]]></text>
 			</staticText>
 			<textField>
-				<reportElement x="81" y="-50" width="70" height="21" uuid="f1513823-6f42-4ed7-bba2-80a52f793284"/>
+				<reportElement x="81" y="-80" width="70" height="21" uuid="f1513823-6f42-4ed7-bba2-80a52f793284"/>
 				<box>
 					<topPen lineWidth="1.0"/>
 					<leftPen lineWidth="1.0"/>
 					<bottomPen lineWidth="1.0"/>
 				</box>
-				<textElement textAlignment="Center" verticalAlignment="Middle"/>
-				<textFieldExpression><![CDATA[$F{realName}]]></textFieldExpression>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="宋体"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{realName}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="81" y="-28" width="71" height="19" uuid="5892051f-8c97-40cb-b846-10081884f064"/>
+				<reportElement x="81" y="-58" width="71" height="19" uuid="5892051f-8c97-40cb-b846-10081884f064"/>
 				<box>
 					<leftPen lineWidth="1.0"/>
 					<bottomPen lineWidth="1.0"/>
 				</box>
-				<textElement textAlignment="Center" verticalAlignment="Middle"/>
-				<textFieldExpression><![CDATA[$F{cardType}]]></textFieldExpression>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="宋体"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{cardType}]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement x="152" y="-50" width="48" height="21" uuid="32abd8cb-4e2a-4816-8087-532a74347212"/>
+				<reportElement x="152" y="-80" width="48" height="21" uuid="32abd8cb-4e2a-4816-8087-532a74347212"/>
 				<box>
 					<topPen lineWidth="1.0"/>
 					<leftPen lineWidth="1.0"/>
 					<bottomPen lineWidth="1.0"/>
 				</box>
-				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="宋体"/>
+				</textElement>
 				<text><![CDATA[性别]]></text>
 			</staticText>
 			<textField>
-				<reportElement x="201" y="-50" width="59" height="21" uuid="51026b85-6919-4e41-a65e-0b1644895fe9"/>
+				<reportElement x="201" y="-80" width="59" height="21" uuid="51026b85-6919-4e41-a65e-0b1644895fe9"/>
 				<box>
 					<topPen lineWidth="1.0"/>
 					<leftPen lineWidth="1.0"/>
 					<bottomPen lineWidth="1.0"/>
 				</box>
-				<textElement textAlignment="Center" verticalAlignment="Middle"/>
-				<textFieldExpression><![CDATA[$F{gender}]]></textFieldExpression>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="宋体"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{gender}]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement x="260" y="-50" width="70" height="21" uuid="bd881dc6-9289-4044-9bee-c0ce1d2fb1ad"/>
+				<reportElement x="260" y="-80" width="70" height="21" uuid="bd881dc6-9289-4044-9bee-c0ce1d2fb1ad">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
 				<box>
 					<topPen lineWidth="1.0"/>
 					<leftPen lineWidth="1.0"/>
 					<bottomPen lineWidth="1.0"/>
 				</box>
-				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="宋体"/>
+				</textElement>
 				<text><![CDATA[出生日期]]></text>
 			</staticText>
 			<textField>
-				<reportElement x="330" y="-50" width="70" height="21" uuid="76b2d3de-c731-4c1c-afa0-322ffff702d1"/>
+				<reportElement x="330" y="-80" width="70" height="21" uuid="76b2d3de-c731-4c1c-afa0-322ffff702d1"/>
 				<box>
 					<topPen lineWidth="1.0"/>
 					<leftPen lineWidth="1.0"/>
 					<bottomPen lineWidth="1.0"/>
 				</box>
-				<textElement textAlignment="Center" verticalAlignment="Middle"/>
-				<textFieldExpression><![CDATA[$F{birthday}]]></textFieldExpression>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="宋体"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{birthday}]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement x="400" y="-50" width="80" height="21" uuid="ced1998e-27ee-4a7f-9d0c-10e65def9107"/>
+				<reportElement x="400" y="-80" width="80" height="21" uuid="ced1998e-27ee-4a7f-9d0c-10e65def9107"/>
 				<box>
 					<topPen lineWidth="1.0"/>
 					<leftPen lineWidth="1.0"/>
 					<bottomPen lineWidth="1.0"/>
 				</box>
-				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="宋体"/>
+				</textElement>
 				<text><![CDATA[国籍]]></text>
 			</staticText>
 			<textField>
-				<reportElement x="480" y="-50" width="75" height="21" uuid="941822cf-e6ae-4897-9379-bcd43b2b36d5"/>
+				<reportElement x="480" y="-80" width="75" height="21" uuid="941822cf-e6ae-4897-9379-bcd43b2b36d5"/>
 				<box>
 					<topPen lineWidth="1.0"/>
 					<leftPen lineWidth="1.0"/>
 					<bottomPen lineWidth="1.0"/>
 					<rightPen lineWidth="1.0"/>
 				</box>
-				<textElement textAlignment="Center" verticalAlignment="Middle"/>
-				<textFieldExpression><![CDATA[$F{nationality}]]></textFieldExpression>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="宋体"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{nationality}]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement x="152" y="-27" width="69" height="18" uuid="14f0b508-f307-48c2-9d84-a4f819ce8a98"/>
+				<reportElement x="152" y="-58" width="48" height="19" uuid="14f0b508-f307-48c2-9d84-a4f819ce8a98"/>
 				<box>
 					<leftPen lineWidth="1.0"/>
 					<bottomPen lineWidth="1.0"/>
 				</box>
-				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="宋体"/>
+				</textElement>
 				<text><![CDATA[号码]]></text>
 			</staticText>
 			<textField>
-				<reportElement x="220" y="-30" width="180" height="21" uuid="cdbfd67d-afa3-4b9c-a7b9-5f5cd03966d9"/>
+				<reportElement x="201" y="-59" width="198" height="20" uuid="cdbfd67d-afa3-4b9c-a7b9-5f5cd03966d9">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
 				<box>
 					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
 					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
-				<textElement textAlignment="Center" verticalAlignment="Middle"/>
-				<textFieldExpression><![CDATA[$F{cardNumber}]]></textFieldExpression>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="宋体"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{cardNumber}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="400" y="-28" width="155" height="19" uuid="16b259dd-59bc-4c71-baa2-257d9c9d5d83"/>
+				<reportElement x="400" y="-58" width="155" height="19" uuid="16b259dd-59bc-4c71-baa2-257d9c9d5d83"/>
 				<box>
 					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
 					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
 					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
-				<textElement textAlignment="Center" verticalAlignment="Middle"/>
-				<textFieldExpression><![CDATA[$F{censusType}]]></textFieldExpression>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="宋体"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{censusType}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="131" y="12" width="89" height="19" uuid="4601b637-67e1-415f-99ae-1ef736e8f772"/>
+				<reportElement x="131" y="-18" width="89" height="19" uuid="4601b637-67e1-415f-99ae-1ef736e8f772"/>
 				<box>
 					<leftPen lineWidth="1.0"/>
 					<bottomPen lineWidth="1.0"/>
 				</box>
-				<textElement textAlignment="Center" verticalAlignment="Middle"/>
-				<textFieldExpression><![CDATA[$F{alreadyLicenceType}]]></textFieldExpression>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="宋体"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{alreadyLicenceType}]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement x="220" y="-8" width="69" height="39" uuid="0d0790de-982d-4e8a-925c-21069c280bbb"/>
+				<reportElement x="220" y="-38" width="69" height="39" uuid="0d0790de-982d-4e8a-925c-21069c280bbb"/>
 				<box>
 					<leftPen lineWidth="1.0"/>
 					<bottomPen lineWidth="1.0"/>
 				</box>
-				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="宋体"/>
+				</textElement>
 				<text><![CDATA[档案编号]]></text>
 			</staticText>
 			<textField>
-				<reportElement x="289" y="-8" width="131" height="39" uuid="4b4b38ee-d787-4afc-a19e-a3023bcffbf4"/>
+				<reportElement x="289" y="-38" width="151" height="39" uuid="4b4b38ee-d787-4afc-a19e-a3023bcffbf4"/>
 				<box>
 					<leftPen lineWidth="1.0"/>
 					<bottomPen lineWidth="1.0"/>
 				</box>
-				<textElement textAlignment="Center" verticalAlignment="Middle"/>
-				<textFieldExpression><![CDATA[$F{sno}]]></textFieldExpression>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="宋体"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{sno}]]></textFieldExpression>
 			</textField>
 			<image>
-				<reportElement x="420" y="-8" width="135" height="158" uuid="103d6236-12a2-46fb-b933-9afa4230fbdf"/>
+				<reportElement x="440" y="-38" width="115" height="158" uuid="103d6236-12a2-46fb-b933-9afa4230fbdf"/>
 				<box>
 					<leftPen lineWidth="1.0"/>
 					<bottomPen lineWidth="1.0"/>
@@ -377,73 +519,1036 @@
 				</box>
 			</image>
 			<textField>
-				<reportElement x="81" y="31" width="139" height="20" uuid="1c62b70a-6ffd-4fea-b96d-270353669b49"/>
+				<reportElement x="81" y="1" width="139" height="20" uuid="1c62b70a-6ffd-4fea-b96d-270353669b49"/>
 				<box>
 					<leftPen lineWidth="1.0"/>
 					<bottomPen lineWidth="1.0"/>
 				</box>
-				<textElement textAlignment="Center" verticalAlignment="Middle"/>
-				<textFieldExpression><![CDATA[$F{postAddress}]]></textFieldExpression>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="宋体"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{postAddress}]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement x="220" y="31" width="69" height="20" uuid="8c0b75b3-b255-49ec-bcfb-789c8308af81"/>
+				<reportElement x="220" y="1" width="69" height="20" uuid="8c0b75b3-b255-49ec-bcfb-789c8308af81"/>
 				<box>
 					<leftPen lineWidth="1.0"/>
 					<bottomPen lineWidth="1.0"/>
 				</box>
-				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="宋体"/>
+				</textElement>
 				<text><![CDATA[联系电话]]></text>
 			</staticText>
 			<textField>
-				<reportElement x="289" y="31" width="131" height="20" uuid="5acf59a9-757d-4318-bf9f-710553674c8d"/>
+				<reportElement x="289" y="1" width="151" height="20" uuid="5acf59a9-757d-4318-bf9f-710553674c8d"/>
 				<box>
 					<leftPen lineWidth="1.0"/>
 					<bottomPen lineWidth="1.0"/>
 				</box>
-				<textElement textAlignment="Center" verticalAlignment="Middle"/>
-				<textFieldExpression><![CDATA[$F{phoneNumber}]]></textFieldExpression>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="宋体"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{phoneNumber}]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement x="30" y="51" width="70" height="19" uuid="a3017803-0671-4fba-b4a0-9a47f0e8db62"/>
+				<reportElement x="30" y="21" width="70" height="19" uuid="a3017803-0671-4fba-b4a0-9a47f0e8db62"/>
 				<box padding="0">
 					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
-				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="宋体"/>
+				</textElement>
 				<text><![CDATA[本人如实申告]]></text>
 			</staticText>
 			<image>
-				<reportElement x="109" y="56" width="11" height="11" uuid="c550a2df-b373-465b-a25b-41da46a9af7b">
+				<reportElement x="109" y="26" width="11" height="11" uuid="c550a2df-b373-465b-a25b-41da46a9af7b">
 					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
 				</reportElement>
-				<imageExpression><![CDATA["resources/ic_unchecked.png"]]></imageExpression>
+				<imageExpression><![CDATA[IF( $P{haveIllness}, "resources/ic_checked.png", "resources/ic_unchecked.png")]]></imageExpression>
 			</image>
 			<staticText>
-				<reportElement x="126" y="51" width="43" height="19" uuid="68fb87bd-084b-49a4-bf48-25feb9e8fe7d"/>
-				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<reportElement x="126" y="21" width="43" height="19" uuid="68fb87bd-084b-49a4-bf48-25feb9e8fe7d"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="宋体"/>
+				</textElement>
 				<text><![CDATA[具有]]></text>
 			</staticText>
 			<line>
-				<reportElement x="30" y="70" width="390" height="1" uuid="4c8cbcf5-1f69-4799-9737-968ddb9f66ef"/>
+				<reportElement x="30" y="41" width="410" height="1" uuid="4c8cbcf5-1f69-4799-9737-968ddb9f66ef"/>
 			</line>
 			<image>
-				<reportElement x="169" y="54" width="14" height="14" uuid="7eedb58e-900e-469b-853a-dcf742d6fae4">
+				<reportElement x="169" y="24" width="14" height="14" uuid="7eedb58e-900e-469b-853a-dcf742d6fae4">
 					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
 					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
 				</reportElement>
-				<imageExpression><![CDATA["resources/ic_checked.png"]]></imageExpression>
+				<imageExpression><![CDATA[IF( $P{haveIllness}, "resources/ic_unchecked.png", "resources/ic_checked.png")]]></imageExpression>
 			</image>
 			<staticText>
-				<reportElement x="189" y="51" width="38" height="19" uuid="dcdfb2df-ad17-4264-9bb5-72ff358ab7dd"/>
-				<textElement verticalAlignment="Middle"/>
+				<reportElement x="189" y="21" width="38" height="19" uuid="dcdfb2df-ad17-4264-9bb5-72ff358ab7dd"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="宋体"/>
+				</textElement>
 				<text><![CDATA[不具有]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="231" y="51" width="85" height="19" uuid="782c52ba-3b16-450d-bc68-ff2ae09e13b9"/>
-				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<reportElement x="231" y="21" width="85" height="19" uuid="782c52ba-3b16-450d-bc68-ff2ae09e13b9"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="宋体"/>
+				</textElement>
 				<text><![CDATA[下列疾病或情况]]></text>
+			</staticText>
+			<frame>
+				<reportElement x="30" y="42" width="95" height="20" uuid="61e476c5-569c-4fc9-88ff-6195a8c51d65">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+				</reportElement>
+				<image>
+					<reportElement x="7" y="3" width="11" height="11" uuid="0e764857-a334-4385-a938-044dd37a8ce6">
+						<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					</reportElement>
+					<imageExpression><![CDATA["resources/ic_unchecked.png"]]></imageExpression>
+				</image>
+				<textField>
+					<reportElement x="20" y="1" width="70" height="16" uuid="33dcee81-5a3e-4391-ac36-ed7b56a93e49">
+						<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					</reportElement>
+					<textElement>
+						<font fontName="宋体"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{illnessType}]]></textFieldExpression>
+				</textField>
+			</frame>
+			<staticText>
+				<reportElement x="30" y="100" width="409" height="20" uuid="f5ef3f0f-6954-4946-880d-b417e3edf16f">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="宋体"/>
+				</textElement>
+				<text><![CDATA[上述申告为本人真实情况和真实意思表示，如果不属实本人愿意承担相应的法律责任]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="120" width="30" height="270" uuid="7a6820f9-eebf-4a01-aba8-5311f9cd345f">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<box>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="宋体"/>
+				</textElement>
+				<text><![CDATA[医
+疗
+机
+构
+填
+写
+事
+项
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="30" y="120" width="79" height="30" uuid="2627333b-bf6f-40a6-9b36-9ec4f79772f5">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<box>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="宋体"/>
+				</textElement>
+				<text><![CDATA[身高]]></text>
+			</staticText>
+			<frame>
+				<reportElement x="109" y="120" width="191" height="30" uuid="c3ba0f20-5277-44c3-a937-a3b5da7e803f"/>
+				<box>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textField>
+					<reportElement x="59" y="9" width="38" height="14" uuid="b1e8b846-20e5-400b-b69d-bad0b17aa3ad"/>
+					<box>
+						<bottomPen lineWidth="1.0"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="宋体"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{height}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="99" y="7" width="28" height="16" uuid="fdaf5b80-ff44-4aee-b09f-e4fd5134ac17"/>
+					<textElement verticalAlignment="Bottom">
+						<font fontName="宋体"/>
+					</textElement>
+					<text><![CDATA[CM]]></text>
+				</staticText>
+			</frame>
+			<frame>
+				<reportElement x="350" y="120" width="89" height="30" uuid="020e4ce2-2135-4339-bdc2-9ab404a3d8d8"/>
+				<box>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<staticText>
+					<reportElement x="0" y="0" width="89" height="14" uuid="a3e54b71-80bf-44c1-ad39-c4b75c718fb2">
+						<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="宋体"/>
+					</textElement>
+					<text><![CDATA[红绿色盲]]></text>
+				</staticText>
+				<image>
+					<reportElement x="15" y="16" width="11" height="11" uuid="3b54b570-350a-4215-a2a1-1418f3f34cde">
+						<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					</reportElement>
+					<imageExpression><![CDATA[IF($P{isColorBlindness}, "resources/ic_checked.png", "resources/ic_unchecked.png")]]></imageExpression>
+				</image>
+				<staticText>
+					<reportElement x="31" y="14" width="14" height="14" uuid="2c5a8c4c-51bf-44af-aa84-53bc1660dce8"/>
+					<textElement textAlignment="Left" verticalAlignment="Top">
+						<font fontName="宋体"/>
+					</textElement>
+					<text><![CDATA[有]]></text>
+				</staticText>
+				<image>
+					<reportElement x="53" y="14" width="14" height="14" uuid="e00f01f5-958e-4695-bf22-975f6e6d882e">
+						<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					</reportElement>
+					<imageExpression><![CDATA[IF($P{isColorBlindness}, "resources/ic_unchecked.png", "resources/ic_checked.png")]]></imageExpression>
+				</image>
+				<staticText>
+					<reportElement x="70" y="15" width="12" height="14" uuid="2ef39a61-d9d1-4bf9-aada-f5c56b3ada48"/>
+					<textElement>
+						<font fontName="宋体"/>
+					</textElement>
+					<text><![CDATA[无]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="-50" y="0" width="49" height="30" uuid="abe510d1-6823-4212-977b-8ab9c7667c28"/>
+					<box>
+						<leftPen lineWidth="1.0"/>
+						<bottomPen lineWidth="1.0"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="宋体"/>
+					</textElement>
+					<text><![CDATA[辨色力]]></text>
+				</staticText>
+			</frame>
+			<staticText>
+				<reportElement x="30" y="150" width="79" height="60" uuid="da015112-a625-43fb-96d0-de1e06aa4a7b">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<box>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="宋体"/>
+				</textElement>
+				<text><![CDATA[视力]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="109" y="150" width="191" height="30" uuid="2bcf8c52-da49-431c-8e18-ebbee2bbbba0"/>
+				<box>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font fontName="宋体" isUnderline="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA["左眼：裸视力或者矫正视力达到对数视力表数为" + $P{eyesightLeft}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="109" y="180" width="191" height="30" uuid="74484517-c9af-48e5-8901-583db33fd163"/>
+				<box>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font fontName="宋体"/>
+				</textElement>
+				<textFieldExpression><![CDATA["右眼：裸视力或者矫正视力达到对数视力表数为" + $P{eyesightRight} + ",且水平视野达到150度以上"]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="300" y="150" width="49" height="60" uuid="5c42a02f-31eb-4195-bb6d-29c0585d5750"/>
+				<box>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="宋体"/>
+				</textElement>
+				<text><![CDATA[是否矫正]]></text>
+			</staticText>
+			<frame>
+				<reportElement x="350" y="150" width="89" height="30" uuid="d8ca635d-c92a-4d85-85dd-9356f8f8a10e"/>
+				<box>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<image>
+					<reportElement x="15" y="10" width="11" height="11" uuid="a9110f48-051e-493e-a6c4-35b36a594a35">
+						<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					</reportElement>
+					<imageExpression><![CDATA[IF($P{isCorrectionLeftEye}, "resources/ic_checked.png", "resources/ic_unchecked.png" )]]></imageExpression>
+				</image>
+				<staticText>
+					<reportElement x="31" y="8" width="14" height="16" uuid="1c754a07-84fd-4ed7-a1a5-5d221c78268a"/>
+					<textElement>
+						<font fontName="宋体"/>
+					</textElement>
+					<text><![CDATA[是]]></text>
+				</staticText>
+				<image>
+					<reportElement x="53" y="8" width="14" height="14" uuid="ff82f2e1-a23f-4178-8db8-27b4fedae574">
+						<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					</reportElement>
+					<imageExpression><![CDATA[IF($P{isCorrectionLeftEye}, "resources/ic_unchecked.png", "resources/ic_checked.png" )]]></imageExpression>
+				</image>
+				<staticText>
+					<reportElement x="70" y="8" width="14" height="16" uuid="2f64c456-0d7a-41bf-a722-6f75e82bfaa6"/>
+					<textElement>
+						<font fontName="宋体"/>
+					</textElement>
+					<text><![CDATA[否]]></text>
+				</staticText>
+			</frame>
+			<frame>
+				<reportElement x="350" y="180" width="89" height="30" uuid="b2001e46-f7e4-4d4a-aada-86bec0cb7cc5"/>
+				<box>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<image>
+					<reportElement x="15" y="10" width="11" height="11" uuid="c33c2807-3146-4f23-b01c-dd6e62024f2b">
+						<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					</reportElement>
+					<imageExpression><![CDATA[IF( $P{isCorrectionRightEye}, "resources/ic_checked.png", "resources/ic_unchecked.png")]]></imageExpression>
+				</image>
+				<staticText>
+					<reportElement x="31" y="8" width="12" height="16" uuid="7bf0d269-bdbe-41fb-80f3-f36ccecc037a"/>
+					<textElement>
+						<font fontName="宋体"/>
+					</textElement>
+					<text><![CDATA[是]]></text>
+				</staticText>
+				<image>
+					<reportElement x="53" y="8" width="14" height="14" uuid="9fb200be-b3bf-401d-8eb3-99e20880b240">
+						<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					</reportElement>
+					<imageExpression><![CDATA[IF( $P{isCorrectionRightEye}, "resources/ic_unchecked.png", "resources/ic_checked.png")]]></imageExpression>
+				</image>
+				<staticText>
+					<reportElement x="70" y="8" width="16" height="16" uuid="d799fed7-f3ad-4f0a-ba87-273a7dcc8641"/>
+					<textElement>
+						<font fontName="宋体"/>
+					</textElement>
+					<text><![CDATA[否]]></text>
+				</staticText>
+			</frame>
+			<frame>
+				<reportElement x="440" y="120" width="115" height="90" uuid="645f584b-dd51-44d1-b51c-8c6f694a5805">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<box>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<staticText>
+					<reportElement x="1" y="0" width="112" height="22" uuid="d55e3cb4-2230-4c88-acc6-9a09fb0fb270"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="宋体"/>
+					</textElement>
+					<text><![CDATA[(医疗机构章)]]></text>
+				</staticText>
+				<textField>
+					<reportElement x="1" y="22" width="112" height="46" uuid="99c177bd-a8ec-4d47-9a5f-0f59eec054d8"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="宋体"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{hospital}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="1" y="68" width="112" height="22" uuid="f366621b-fecb-4c6c-bf40-b3d05cff3e8a"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="宋体"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{examDate}]]></textFieldExpression>
+				</textField>
+			</frame>
+			<staticText>
+				<reportElement x="30" y="210" width="16" height="63" uuid="457853b3-4b75-411e-9680-b6686ab03e19">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<box>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="宋体"/>
+				</textElement>
+				<text><![CDATA[听力]]></text>
+			</staticText>
+			<frame>
+				<reportElement x="47" y="210" width="62" height="63" uuid="4685fc74-e74d-4e5e-a684-f38ff007d6a6"/>
+				<box>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<staticText>
+					<reportElement x="0" y="0" width="62" height="32" uuid="54635c8c-be7c-432e-9c4a-ff2591e7b35c"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="宋体"/>
+					</textElement>
+					<text><![CDATA[佩戴助听装置]]></text>
+				</staticText>
+				<image>
+					<reportElement x="5" y="40" width="11" height="11" uuid="88c022c9-8692-4b80-a7c5-a320885b989f">
+						<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					</reportElement>
+					<imageExpression><![CDATA[IF( $P{hasHearingAids}, "resources/ic_checked.png", "resources/ic_unchecked.png")]]></imageExpression>
+				</image>
+				<staticText>
+					<reportElement x="17" y="39" width="12" height="16" uuid="c01bc1ce-d55d-47a6-9bce-1ad54c322628"/>
+					<textElement verticalAlignment="Top">
+						<font fontName="宋体"/>
+					</textElement>
+					<text><![CDATA[是]]></text>
+				</staticText>
+				<image>
+					<reportElement x="31" y="38" width="14" height="14" uuid="95192caf-2338-43af-a5ec-947f85e86a50">
+						<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					</reportElement>
+					<imageExpression><![CDATA[IF( $P{hasHearingAids}, "resources/ic_unchecked.png", "resources/ic_checked.png")]]></imageExpression>
+				</image>
+				<staticText>
+					<reportElement x="46" y="38" width="16" height="16" uuid="8185cb7f-8acd-4f99-bac4-123330cbf8c0"/>
+					<textElement>
+						<font fontName="宋体"/>
+					</textElement>
+					<text><![CDATA[否]]></text>
+				</staticText>
+			</frame>
+			<frame>
+				<reportElement x="109" y="210" width="191" height="32" uuid="22c5e90a-26ee-4aa4-897c-c52a7d4a76ac"/>
+				<box>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<staticText>
+					<reportElement x="0" y="0" width="190" height="16" uuid="14654ec5-2628-4bae-9ba0-38bd3f7200a5"/>
+					<textElement>
+						<font fontName="宋体"/>
+					</textElement>
+					<text><![CDATA[左耳距音叉50厘米能辨别声源方向:]]></text>
+				</staticText>
+				<image>
+					<reportElement x="2" y="16" width="14" height="14" uuid="2757b427-54a5-452e-9ebb-b88001759dfa">
+						<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					</reportElement>
+					<imageExpression><![CDATA[IF($P{isLeftEarQualified} , "resources/ic_checked.png", "resources/ic_unchecked.png")]]></imageExpression>
+				</image>
+				<staticText>
+					<reportElement x="19" y="16" width="20" height="16" uuid="8d0bc1d6-38a6-439b-9602-38f56d919ba2"/>
+					<textElement>
+						<font fontName="宋体"/>
+					</textElement>
+					<text><![CDATA[能]]></text>
+				</staticText>
+				<image>
+					<reportElement x="52" y="17" width="11" height="11" uuid="c2afa0e8-0bc2-45ac-b4fd-e023a28ed29c">
+						<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					</reportElement>
+					<imageExpression><![CDATA[IF($P{isLeftEarQualified} , "resources/ic_unchecked.png", "resources/ic_checked.png")]]></imageExpression>
+				</image>
+				<staticText>
+					<reportElement x="68" y="16" width="22" height="14" uuid="fb8cba78-df73-4c8d-9f00-52ba08090c50"/>
+					<textElement>
+						<font fontName="宋体"/>
+					</textElement>
+					<text><![CDATA[否]]></text>
+				</staticText>
+			</frame>
+			<frame>
+				<reportElement x="109" y="241" width="191" height="32" uuid="7402bdbf-06ef-4bc7-8e1e-2a5c7449fb1a"/>
+				<box>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<staticText>
+					<reportElement x="0" y="0" width="190" height="16" uuid="6bb4e664-1fff-4f49-a90f-c69fdbb61a52"/>
+					<textElement>
+						<font fontName="宋体"/>
+					</textElement>
+					<text><![CDATA[右耳距音叉50厘米能辨别声源方向:]]></text>
+				</staticText>
+				<image>
+					<reportElement x="2" y="16" width="14" height="14" uuid="310a1795-39b1-4b3b-9a65-8b48f865f8a6">
+						<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					</reportElement>
+					<imageExpression><![CDATA[IF($P{isRightEarQualified}, "resources/ic_checked.png", "resources/ic_unchecked.png")]]></imageExpression>
+				</image>
+				<staticText>
+					<reportElement x="19" y="16" width="20" height="16" uuid="8436eaf6-0147-435c-bd07-58344b8188e2"/>
+					<textElement>
+						<font fontName="宋体"/>
+					</textElement>
+					<text><![CDATA[能]]></text>
+				</staticText>
+				<image>
+					<reportElement x="52" y="17" width="11" height="11" uuid="a4ca2f77-194a-4715-96f1-8f3bee4040d9">
+						<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					</reportElement>
+					<imageExpression><![CDATA[IF($P{isRightEarQualified}, "resources/ic_unchecked.png", "resources/ic_checked.png")]]></imageExpression>
+				</image>
+				<staticText>
+					<reportElement x="68" y="16" width="22" height="14" uuid="2cf5ad84-fa11-4f1d-b5c0-62c916d2133e"/>
+					<textElement>
+						<font fontName="宋体"/>
+					</textElement>
+					<text><![CDATA[否]]></text>
+				</staticText>
+			</frame>
+			<staticText>
+				<reportElement x="300" y="210" width="49" height="63" uuid="6b53c814-3cb6-4aef-b3c9-ba9085a3905a"/>
+				<box>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="宋体"/>
+				</textElement>
+				<text><![CDATA[颈部和躯干]]></text>
+			</staticText>
+			<frame>
+				<reportElement x="350" y="210" width="205" height="63" uuid="f15df47d-923d-4333-b809-7d17d55ddc04">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<box>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<staticText>
+					<reportElement x="1" y="1" width="204" height="30" uuid="cf2f06eb-6ebc-42f6-a930-5f36652dd9e0"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="宋体"/>
+					</textElement>
+					<text><![CDATA[运动功能障碍]]></text>
+				</staticText>
+				<image>
+					<reportElement x="56" y="36" width="11" height="11" uuid="fdd294bb-f15e-447f-9f14-b9b3816fbe84">
+						<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					</reportElement>
+					<imageExpression><![CDATA[IF($P{isTrunkNeckPerfect}, "resources/ic_checked.png", "resources/ic_unchecked.png")]]></imageExpression>
+				</image>
+				<staticText>
+					<reportElement x="71" y="32" width="32" height="18" uuid="084be3e5-fe76-4522-b635-0777d3935d29"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="宋体"/>
+					</textElement>
+					<text><![CDATA[有]]></text>
+				</staticText>
+				<image>
+					<reportElement x="122" y="35" width="14" height="14" uuid="49374b6d-14f5-4590-8d04-fd85c0378a8b">
+						<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					</reportElement>
+					<imageExpression><![CDATA[IF($P{isTrunkNeckPerfect}, "resources/ic_unchecked.png", "resources/ic_checked.png")]]></imageExpression>
+				</image>
+				<staticText>
+					<reportElement x="142" y="34" width="28" height="16" uuid="b15d105c-1ae1-4d56-8205-721d457426dc"/>
+					<textElement>
+						<font fontName="宋体"/>
+					</textElement>
+					<text><![CDATA[无]]></text>
+				</staticText>
+			</frame>
+			<staticText>
+				<reportElement x="30" y="273" width="17" height="91" uuid="77cc1e3c-b4b2-4622-996b-41eff146e530">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<box>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="宋体"/>
+				</textElement>
+				<text><![CDATA[上肢]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="48" y="273" width="61" height="45" uuid="6530d6df-7073-4753-a190-507d1b9093f2">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="宋体"/>
+				</textElement>
+				<text><![CDATA[左上肢]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="48" y="319" width="61" height="45" uuid="75f59026-a81a-430f-9432-ee5d8f4e860e">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="宋体"/>
+				</textElement>
+				<text><![CDATA[右上肢]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="109" y="273" width="191" height="45" uuid="cf447427-bca6-408a-b25f-dbce8923c2dc">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<box>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="宋体"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{limbLeftTop}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="109" y="319" width="191" height="45" uuid="c552957f-085b-4a72-bfc1-54170f730eec">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+				</reportElement>
+				<box>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="宋体"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{limbRightTop}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="300" y="273" width="49" height="91" uuid="1f9a6a3d-8768-4587-9c59-ab5f8fada7ea">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<box>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="宋体"/>
+				</textElement>
+				<text><![CDATA[下肢]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="350" y="274" width="56" height="45" uuid="54ed4a13-8075-427c-bf4b-df33efe2a461">
+					<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<box>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="宋体"/>
+				</textElement>
+				<text><![CDATA[左下肢]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="350" y="319" width="56" height="45" uuid="997709b9-6c87-469c-94aa-70a5c9419ba3">
+					<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<box>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="宋体"/>
+				</textElement>
+				<text><![CDATA[右下肢]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="406" y="274" width="149" height="45" uuid="ceeca610-3f33-46ca-8cfe-a7baeec2653a">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<box>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="宋体"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{limbLeftBottom}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="406" y="319" width="149" height="45" uuid="fe4b5064-c080-4a7d-8a32-db6b21843f47">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<box>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="宋体"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{limbRightBottom}]]></textFieldExpression>
+			</textField>
+			<frame>
+				<reportElement x="30" y="364" width="525" height="26" uuid="eba30e32-b867-493f-80c3-19e6daed3d5b">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<box>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<staticText>
+					<reportElement x="0" y="0" width="270" height="25" uuid="ea0668bf-6d14-435b-bb9c-ec8e4fee8136">
+						<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					</reportElement>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="宋体"/>
+					</textElement>
+					<text><![CDATA[双下肢缺失或者丧失运动功能障碍是否能够自主坐立]]></text>
+				</staticText>
+				<image>
+					<reportElement x="281" y="6" width="14" height="14" uuid="c69fcbbe-8937-4f8c-809e-618b1e41e1d6">
+						<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					</reportElement>
+					<imageExpression><![CDATA[IF( $P{isMotorDysfunction}, "resources/ic_checked.png", "resources/ic_unchecked.png")]]></imageExpression>
+				</image>
+				<staticText>
+					<reportElement x="299" y="3" width="31" height="19" uuid="09749dd8-83bb-46a9-ac9a-24c9217d89d7">
+						<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					</reportElement>
+					<textElement verticalAlignment="Middle">
+						<font fontName="宋体"/>
+					</textElement>
+					<text><![CDATA[是]]></text>
+				</staticText>
+				<image>
+					<reportElement x="341" y="7" width="11" height="11" uuid="540d4afd-7fe8-49c9-acac-bc1321207183">
+						<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+					</reportElement>
+					<imageExpression><![CDATA[IF( $P{isMotorDysfunction}, "resources/ic_unchecked.png", "resources/ic_checked.png")]]></imageExpression>
+				</image>
+				<staticText>
+					<reportElement x="358" y="3" width="28" height="19" uuid="efb9bccd-e7f6-4fd9-bcb6-ad6da11d6d1e">
+						<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					</reportElement>
+					<textElement verticalAlignment="Middle">
+						<font fontName="宋体"/>
+					</textElement>
+					<text><![CDATA[否]]></text>
+				</staticText>
+			</frame>
+			<staticText>
+				<reportElement x="0" y="390" width="47" height="50" uuid="545612d4-b120-473d-891f-c4769b090da9"/>
+				<box>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="宋体"/>
+				</textElement>
+				<text><![CDATA[申请方式]]></text>
+			</staticText>
+			<frame>
+				<reportElement x="47" y="390" width="180" height="50" uuid="c7a90413-37bb-4102-875e-5b831947107f">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<image>
+					<reportElement x="6" y="6" width="14" height="14" uuid="a7d9ee83-a1fe-4e76-b3fa-0bf3d613858b">
+						<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					</reportElement>
+					<imageExpression><![CDATA[IF( $P{hasProxy}, "resources/ic_unchecked.png", "resources/ic_checked.png")]]></imageExpression>
+				</image>
+				<staticText>
+					<reportElement x="22" y="5" width="126" height="16" uuid="aa54730a-26b7-4799-81f5-4bfe2e76d978"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="宋体"/>
+					</textElement>
+					<text><![CDATA[本人申请(默认强制选择)]]></text>
+				</staticText>
+				<image>
+					<reportElement x="7" y="30" width="11" height="11" uuid="817e66b1-74df-4df4-a480-4c3557e6c082">
+						<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+					</reportElement>
+					<imageExpression><![CDATA[IF( $P{hasProxy}, "resources/ic_checked.png", "resources/ic_unchecked.png")]]></imageExpression>
+				</image>
+				<staticText>
+					<reportElement x="21" y="27" width="23" height="16" uuid="0967036f-dbbf-4dd4-8220-374a78bb36b5">
+						<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					</reportElement>
+					<textElement verticalAlignment="Middle">
+						<font fontName="宋体"/>
+					</textElement>
+					<text><![CDATA[委托]]></text>
+				</staticText>
+				<textField>
+					<reportElement x="44" y="27" width="67" height="16" uuid="58da9794-3029-44b0-90da-fd385f436003">
+						<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					</reportElement>
+					<box topPadding="0" leftPadding="0" bottomPadding="2" rightPadding="0">
+						<bottomPen lineWidth="1.0"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Bottom">
+						<font fontName="宋体"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{principal}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="112" y="27" width="58" height="16" uuid="26bbd971-a8a8-4564-87db-943ef0d08b7f">
+						<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					</reportElement>
+					<textElement verticalAlignment="Middle">
+						<font fontName="宋体"/>
+					</textElement>
+					<text><![CDATA[代理申请]]></text>
+				</staticText>
+			</frame>
+			<staticText>
+				<reportElement x="227" y="390" width="72" height="50" uuid="5d1cfb00-10cc-4509-b71a-b877fce57462">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<box>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="宋体"/>
+				</textElement>
+				<text><![CDATA[体检结论]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="299" y="390" width="256" height="50" uuid="217a8747-6940-496e-8ab5-1b96ffc74753"/>
+				<box>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="宋体"/>
+				</textElement>
+				<textFieldExpression><![CDATA["根据《机动车驾驶证申领和使用管理规定》，申请人(" + $P{realName} + ")体检结果符合" + $P{applyLicenceType} +"准驾车型申请条件"]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="440" width="47" height="49" uuid="2f793b75-79d1-4cab-b465-6af41e38a448">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<box>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="宋体"/>
+				</textElement>
+				<text><![CDATA[委托代理人信息]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="47" y="440" width="62" height="24" uuid="acb6846c-e44e-4b38-89c8-8c2e52fe9565">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<box>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="宋体"/>
+				</textElement>
+				<text><![CDATA[姓名]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="47" y="464" width="62" height="25" uuid="81e52a63-c9ab-4856-9fb0-c9b4456cad97">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<box>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="宋体"/>
+				</textElement>
+				<text><![CDATA[联系地址]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="109" y="440" width="118" height="24" uuid="182ec3e4-8b0f-4b01-aa06-c1c32a2fa5c3">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<box>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="宋体"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{principal}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="109" y="464" width="250" height="25" uuid="c96b369b-8b76-41c5-a57b-c71187ca4080">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<box>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="宋体"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{principalAddress}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="227" y="440" width="72" height="24" uuid="c360dc80-4501-491e-8f87-2e747831e435"/>
+				<box>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="宋体"/>
+				</textElement>
+				<text><![CDATA[证件名称]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="299" y="440" width="60" height="24" uuid="ab69df1c-d81c-4f33-96a0-090084870f32"/>
+				<box>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="宋体"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{principalCardType}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="359" y="440" width="46" height="24" uuid="2d362abc-b5d5-4ccd-b12a-b3056ce9df9c"/>
+				<box>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="宋体"/>
+				</textElement>
+				<text><![CDATA[号码]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="405" y="440" width="150" height="24" uuid="8bac98f2-08c6-48a7-b0be-15200262cb79"/>
+				<box>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="宋体"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{principalIdCard}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="359" y="464" width="46" height="25" uuid="547a7853-cd5f-4922-affc-ff3f2e96de63">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<box>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="宋体"/>
+				</textElement>
+				<text><![CDATA[电话]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="405" y="464" width="150" height="25" uuid="05b5c1a1-eeed-46f6-9c1b-f71137c3d798">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<box>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="宋体"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{principalPhone}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="46" y="503" width="214" height="20" uuid="09d8dcc9-5eb9-48c4-a83a-fa1003a88c97"/>
+				<textElement>
+					<font fontName="宋体"/>
+				</textElement>
+				<textFieldExpression><![CDATA["申请人签字：" + $P{realName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="279" y="503" width="212" height="20" uuid="6a025e66-4b9c-4dd8-b5db-b341f4e8a7a0"/>
+				<textElement>
+					<font fontName="宋体"/>
+				</textElement>
+				<textFieldExpression><![CDATA["医生签字：" + $P{doctor}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="46" y="530" width="484" height="16" uuid="b6c927b6-3da6-4809-a038-f436354e48c3"/>
+				<textElement>
+					<font fontName="宋体"/>
+				</textElement>
+				<text><![CDATA[说明：申请人若对评判结果存有异议可持打印的表格自行到交管部门咨询和处理，此证明有效期6个月。]]></text>
 			</staticText>
 		</band>
 	</detail>
