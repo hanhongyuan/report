@@ -1,22 +1,29 @@
 package com.yunxinlink.report;
 
+import java.awt.Image;
+import java.awt.MediaTracker;
+import java.awt.Panel;
+import java.awt.Toolkit;
 import java.io.File;
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 import net.sf.jasperreports.engine.JRDataSource;
+import net.sf.jasperreports.engine.JREmptyDataSource;
 import net.sf.jasperreports.engine.JRException;
+import net.sf.jasperreports.engine.JRExporterParameter;
 import net.sf.jasperreports.engine.JasperExportManager;
 import net.sf.jasperreports.engine.JasperFillManager;
 import net.sf.jasperreports.engine.JasperPrint;
 import net.sf.jasperreports.engine.JasperReport;
-import net.sf.jasperreports.engine.data.JRBeanCollectionDataSource;
+import net.sf.jasperreports.engine.export.JRPdfExporter;
 import net.sf.jasperreports.engine.util.JRLoader;
 import net.sf.jasperreports.engine.util.JRSaver;
+import net.sf.jasperreports.export.SimpleExporterInput;
+import net.sf.jasperreports.export.SimpleOutputStreamExporterOutput;
+import net.sf.jasperreports.export.SimplePdfExporterConfiguration;
 
 /**
  * Hello world!
@@ -25,13 +32,16 @@ import net.sf.jasperreports.engine.util.JRSaver;
 public class App {
 	public static void main(String[] args) {
 		
-		String reportfile = "exam_erport.jasper";
+		String reportfile = "exam_export.jasper";
 //		String reportfile = "Blank_A4.jasper";
 //		String reportfile = "testbean.jasper";
 //		String reportfile = "HorizontalListReport.jasper";
 		String outFileName = "E://test.pdf";
 		File sourceFile = new File(reportfile);
 		Map<String, Object> map = new HashMap<>();
+		
+		boolean haveIllness = true;
+		
 		map.put("sno", "SN00000000014856");
 		map.put("realName", "张三");
 		map.put("cardType", "身份证");
@@ -66,9 +76,34 @@ public class App {
 		map.put("isRightEarQualified", false);
 		map.put("isTrunkNeckPerfect", true);
 		map.put("isMotorDysfunction", false);
-		map.put("haveIllness", true);
+		map.put("haveIllness", haveIllness);
 		map.put("isColorBlindness", true);
 		map.put("hasProxy", false);
+		
+		try {
+			Image image = Toolkit.getDefaultToolkit().createImage(JRLoader.loadBytes(new File("E:/timg.jpg")));
+			MediaTracker traker = new MediaTracker(new Panel());
+			traker.addImage(image, 0);
+			traker.waitForID(0);
+			map.put("avatar", image);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+		if (haveIllness) {
+			map.put("hasHeartTrouble", false);
+			map.put("hasEpilepsy", true);
+			map.put("hasEpilepsy", true);
+			map.put("hasMeniere", true);
+			map.put("hasDizziness", false);
+			map.put("hasHysterism", true);
+			map.put("hasShakingPalsy", true);
+			map.put("hasPsychosis", false);
+			map.put("hasDementia", true);
+			map.put("hasActivityTrouble", false);
+			map.put("hasDrug", false);
+		}
+		
 //		map.put("id", "id");
 //		map.put("name", "nameValue");
 //		map.put("address", "address");
@@ -83,24 +118,30 @@ public class App {
 			
 			list.add(info);
 		}*/
-		List<InessInfo> list = new ArrayList<>();
-		for (int i = 0; i < 10; i++) {
+		/*List<InessInfo> list = new ArrayList<>();
+		for (int i = 0; i < 1; i++) {
 			InessInfo info = new InessInfo();
 			info.setIllnessType("疾病类型" + i);
 			
 			list.add(info);
-		}
-		JRDataSource dataSource = new JRBeanCollectionDataSource(list);
+		}*/
+//		JRDataSource dataSource = new JRBeanCollectionDataSource(list);
+		JRDataSource dataSource = new JREmptyDataSource(1);
 		try {
 			JasperReport jasperReport = (JasperReport)JRLoader.loadObject(sourceFile);
 			JasperPrint jasperPrint = JasperFillManager.fillReport(reportfile, map, dataSource);
 			File destFile = new File(sourceFile.getParent(), jasperReport.getName() + ".jrprint");
 			JRSaver.saveObject(jasperPrint, destFile);
 			JasperExportManager.exportReportToPdfFile(destFile.getAbsolutePath());
+			JasperExportManager.exportReportToHtmlFile(destFile.getAbsolutePath());
 //			JRPdfExporter exporter = new JRPdfExporter();
-//			
+			
 //			exporter.setParameter(JRExporterParameter.OUTPUT_FILE_NAME, outFileName);
 //            exporter.setParameter(JRExporterParameter.JASPER_PRINT, jasperPrint);
+            
+            
+//            exporter.setExporterOutput(new SimpleOutputStreamExporterOutput(outFileName));
+//            exporter.setExporterInput(new SimpleExporterInput(jasperPrint));
 //            exporter.exportReport();
 		} catch (JRException e) {
 			// TODO Auto-generated catch block
